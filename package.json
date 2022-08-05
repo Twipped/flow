@@ -1,0 +1,89 @@
+{
+  "name": "@twipped/flow",
+  "version": "0.0.0",
+  "description": "React components for easy flexbox and css grid management",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "test": "NODE_ENV=test jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Twipped/flow.git"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "flexbox",
+    "react"
+  ],
+  "author": "Jocelyn Badgley <jocelyn.badgley@zenbusiness.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Twipped/flow/issues"
+  },
+  "homepage": "https://github.com/Twipped/flow#readme",
+  "dependencies": {
+    "@emotion/css": "^11.10.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@twipped/utils": "^6.0.1"
+  },
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=17"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@twipped/eslint-config": "^7.4.0",
+    "@twipped/jest-resolver": "^1.0.0",
+    "@twipped/semrel-config": "^1.0.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.21.0",
+    "jest-environment-jsdom": "^28.1.3",
+    "jest-extended": "^3.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "release": {
+    "extends": "@twipped/semrel-config"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/?(*.)+(spec|test).js"
+    ],
+    "setupFilesAfterEnv": [
+      "jest-extended/all",
+      "@testing-library/jest-dom"
+    ],
+    "transform": {
+      "\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [],
+    "resolver": "@twipped/jest-resolver",
+    "automock": false,
+    "clearMocks": true,
+    "collectCoverage": false
+  },
+  "overrides": {
+    "webpack": "^5"
+  }
+}
